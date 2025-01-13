@@ -1,6 +1,13 @@
 class Solution {
 public: 
 
+    // 1. Reverse graph to check if all nodes reachable from 0 in one bfs.
+    // 2. Binary search on maximum edge weight and traverse graph
+    // 3. Threshold doesn't matter
+        // -> In the reversed graph incoming edge count <= threshold
+        // -> While doing BFS/ DFS you will only come the node from any one path
+        // -> So indegree at max will be 1 for the graph we traverse...
+
     int isValid(vector<vector<pair<int,int>>>& G, int max_val, int n){
         
         vector<bool> vis(n, 0);
